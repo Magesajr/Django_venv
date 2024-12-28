@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{% from 'bootstrap5/table.html' import render_table as t %}
+{% from 'bootstrap5/form.html' import render_form as R %}
+{%block content%}
+    <div>
+        {{t(tickets,table_classes='table table-striped')}}
+    </div>
+{%endblock%}

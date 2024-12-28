@@ -1,0 +1,8 @@
+passenger's name:SAMSON MAGESA
+    phonenumber:+255772697673
+    email:sam263708@gmail.com
+    From:Dar-es-salaam
+    destination:Mtwara
+    seat number:B2(Window)
+    Date:Aug,27~2024
+    Derpeture time:10:30PM

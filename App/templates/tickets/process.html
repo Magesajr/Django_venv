@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% from 'bootstrap5/form.html' import render_form as R,render_hidden_errors as r%}
+{% from 'bootstrap5/utils.html'  import render_messaages as m %}
+{%block content%}
+    <div class="row"> 
+            <div class="left">
+                <legend style="color:red;"> Ticket Details </legend>
+                {{R(form,button_style='btn btn-outline-warning',button_size='lg',form_type='basic')}}
+            </div>
+            <div class="right">
+                <legend>Available Seats</legend>
+                <h4 style="color:blue;font-style:oblique;"> highlighted seats are Taken</h4>
+                {% for seat in a%}
+                    <div class="left list-group" id="myList" role="tablist">
+                        {% if seat.endswith('free') %}
+                            <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">{{seat}}</a>
+                        {%else%}
+                            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">{{seat}}</a>
+                        {%endif%}
+                    </div>
+                {%endfor%}
+                
+            </div>
+    </div>
+<h2 style="color: brown;">{{moment(date).format('LLL')}}</h2>
+{%endblock content%}

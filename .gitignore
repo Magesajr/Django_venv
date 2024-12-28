@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.cfg
+*.pdf
+*.png
+migrations/
+lib/
+bin/
+instance/
+App/testing.py/
