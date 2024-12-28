@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% from 'bootstrap5/table.html' import render_table as m%}
+{% from 'bootstrap5/form.html' import render_form as R%}
+{%block content%}
+    <legend><h1 class="label default-label">Tickets</h1></legend>
+    <div class="page-header mb-4" >
+        {{m(table,table_classes='table table-striped')}}
+    </div>
+    <div class="page-header">
+        <a class="btn btn-outline-danger">Mpesa</a>
+        <a class="btn btn-outline-info" style="background-color:blue;">Tigopesa</a>
+        <a class="btn btn-outline-warning" style="background-color: orangered;">Halotel</a>
+        <a class="btn btn-outline-default" style="background-color:red;">Airtel</a>
+    </div>
+    <div class="container mt-5">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Open Modal
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Modal Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-section">
+                        <a class='btn btn-success' href="{{url_for('tickets.links')}}">azamPay</a> 
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock content%}

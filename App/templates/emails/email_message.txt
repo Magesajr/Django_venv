@@ -1,0 +1,4 @@
+Dear {{user.name}}
+Follow the Following link 
+to have Your ticket
+

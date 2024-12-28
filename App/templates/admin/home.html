@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%block content%}
+    <h1 style="color:tomato;font-style:oblique;margin-bottom:1rem;">Admin page</h1>
+    <div class="container marketing right">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+  
+            <h2>Manage Users</h2>
+            <p>see All users and manage Them</p>
+            <p><a class="btn btn-outline-info" href="{{url_for('admin.users')}}" role="button">Users Management</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+
+            <h2>Ticket Details</h2>
+            <p> Ticket Management and Details</p>
+            <p><a class="btn btn-outline-info" href="{{url_for('admin.tickets')}}" role="button">Tickets</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+  
+            <h2>Payments Details</h2>
+            <p>Manage All Payment Details</p>
+            <p><a class="btn btn-outline-info" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->             
+{%endblock content%}
+

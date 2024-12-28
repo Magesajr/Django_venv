@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{% from 'bootstrap5/table.html' import render_table as t %}
+{% from 'bootstrap5/form.html' import render_form as R %}
+{%block content%}
+<div class="row">
+    <div class="left">
+        {{table|safe}}
+    </div>
+    <div class="right">      
+        <a class="btn btn-outline-info mt-1">Download</a>
+    </div>
+</div>
+{%endblock content%}

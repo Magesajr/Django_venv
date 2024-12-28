@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{% from 'bootstrap5/form.html' import render_form as R%}
+{% from 'bootstrap5/table.html' import render_table as t%}
+{%block content%}
+    <legend>Available Seats</legend>
+    {% for seat in a%}
+    <div class="left list-group" id="myList" role="tablist">
+        {% if seat.endswith('free') %}
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">{{seat}}</a>
+        {%else%}
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">{{seat}}</a>
+        {%endif%}
+    </div>
+    {%endfor%}
+    <!-- <div class="list-group">
+        {{R(form)}}
+    </div> -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="{{url_for('tickets.home')}}">
+      Launch demo modal
+    </button>
+{%endblock content%}        

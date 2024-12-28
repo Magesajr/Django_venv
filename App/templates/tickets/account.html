@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% from 'bootstrap5/table.html' import render_table as t%}
+{% from 'bootstrap5/form.html' import render_form as R%}
+{%block content%}
+ <div class="row">
+    <div class="col">
+      <div class="left mr-2">
+          <legend>Update your Profile</legend>
+          <div class="card" style="width:30rem; height:20rem;">
+            <div class="left list-group">
+              <a class="list-group-item list-group-item-action active">{{current_user.name}}</a>
+            </div>
+            <img src="{{url_for('static',filename='default.JPG')}}" class="rounded-circle" style="width:10rem; height:10rem; padding:1rem;">
+            <div class=>
+              <a>Email:{{current_user.email}}</a>
+            </div>
+          </div>
+          <div class='form-group'>
+            {{R(form)}}
+          </div>
+    </div>
+    {% if current_user.tickets.all() == [] %}
+      <legend> You have No ticket Yet</legend>
+    {%else%}
+        <div class="right">
+          <div class="container">
+            <legend>Your Tickets</legend>
+            {{t(current_user.tickets,table_classes='table table-striped')}}
+            <a class="link" href="{{url_for('tickets.payment')}}">click this link to  make payment for your Tickets</a>
+          </div>
+      </div>
+    {%endif%}
+</div>
+{%endblock content%}

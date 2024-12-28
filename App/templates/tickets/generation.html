@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{%from 'bootstrap5/form.html' import render_form as R%}
+{%block content%}
+    <div class="content-section">
+        {{R(form)}}
+        <a class='btn btn-success' href="{{link}}">azamPay</a> 
+    </div>
+{%endblock content%}

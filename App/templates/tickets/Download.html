@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{% from 'bootstrap5/form.html' import render_form as R%}
+{%block content%}
+    <div class="content-section">
+        {{R(form,button_style='btn btn-outline-warning',button_size='lg',form_type='horizontal')}}  
+    </div>
+    <br>
+{%endblock content%}
